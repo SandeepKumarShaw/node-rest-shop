@@ -10,3 +10,6 @@
   v2.0 version released	
     1. Join product with order using rest API
 	2. Image upload with multer packege and add field product for rest API
+  
+  v3.0 version released	
+    1. Jwt authorization implement in rest API

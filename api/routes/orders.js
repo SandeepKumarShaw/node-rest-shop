@@ -4,6 +4,7 @@ const mongoose      = require('mongoose');
 
 const Order = require('../models/order');
 const Product = require("../models/product");
+const checkAuth = require('../middleware/check-auth');
 
 
 router.get('/',function(req,res,next){
@@ -35,7 +36,7 @@ router.get('/',function(req,res,next){
     });
 });
 
-router.post('/',function(req,res,next){
+router.post('/', checkAuth, function(req,res,next){
   Product.findById(req.body.productId)
   .then(function(product){
     if (!product) {
@@ -103,7 +104,7 @@ router.get('/:orderId',function(req,res,next){
     });  
 });
 
-router.delete("/:orderId", (req, res, next) => {
+router.delete("/:orderId", checkAuth, function(req,res,next){
   Order.remove({ _id: req.params.orderId })
     .exec()
     .then(function(result){
