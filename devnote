@@ -2,7 +2,11 @@
 
   v1.0 version released
 
-    1. Addition of field 
-    2. View 
-    3. Update
-    4. Deletion
+    1. Addition for rest API
+    2. View for rest API
+    3. Update for rest API
+    4. Deletion for rest API
+	
+  v2.0 version released	
+    1. Join product with order using rest API
+	2. Image upload with multer packege and add field product for rest API
